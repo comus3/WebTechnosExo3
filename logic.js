@@ -6,11 +6,13 @@ async function logPlanet() {
     .then ((res => res.json()))
     .then (res2 =>{
         console.table(res2);
-        document.getElementById("Planet name").textContent = (res2.name)
-        document.getElementById("Planet diameter").textContent = ("diameter :" + res2.diameter)
-        document.getElementById("Planet distance").textContent = ("distance :" + res2.distance)
-        document.getElementById("Planet star").textContent = ("star :" + res2.star)
-        document.getElementById("Planet moons").textContent = ("moons :" + res2.moons)
+        document.getElementById("Planet name").textContent = (res2.name);
+        document.getElementById("Planet diameter").textContent = ("diameter :" + res2.diameter);
+        document.getElementById("Planet distance").textContent = ("distance :" + res2.distance);
+        document.getElementById("Planet star").textContent = ("star :" + res2.star);
+        document.getElementById("Planet moons").textContent = ("moons :" + res2.moons);
+
+        document.getElementById("Image").scr("https://dummyimage.com/#standards600x400/000/232761.jpg&text="+res2.name);
     });
     planetNumber = planetNumber + 1;
   }
